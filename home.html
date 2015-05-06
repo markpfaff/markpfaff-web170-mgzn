@@ -1,0 +1,145 @@
+<!doctype html>
+<html 
+    class="index-background">
+    <head>
+        <meta charset="UTF-8">
+
+        <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+
+        <!--Remy Sharp Shim -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+        </script>
+        <![endif]-->
+        <script src="http://use.typekit.net/hby5wtu.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="css/media.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>MGZN | Home</title>
+    </head>
+
+    <body class="index-body">
+        
+        <!-- Background Slider from http://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/-->
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span></li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span><div></li>
+            <li><span>Image 04</span><div></li>
+            <li><span>Image 05</span><div></li>
+            <li><span>Image 06</span><div></li>
+        </ul>        <main>
+            <header class="background-hide">
+                <div id="header-color">
+                <nav class="background-hide">        
+                    <ul> 
+                        <li class="logonav"><a href='#'><img class="logoimage" src="images/logo.png" alt="MGZN Logo"></a></li>
+                        <li id="menu-a"><a href="main.html">About</a></li>
+                        <li id="menu-p"><a href="#">Portfolio</a></li>
+                        <li id="menu-s"><a href="#">Services</a></li>
+                        <li id="menu-j"><a href="#">Journal</a></li>
+                        <li id="menu-c"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="menu-selection" class="background-hide">
+                    <ul> 
+                        <li class="logonav">[]</li>
+                        <li id="menu-a-select" class="nav">[]</li>
+                        <li id="menu-p-select" class="nav">[]</li>
+                        <li id="menu-s-select" class="nav">[]</li>
+                        <li id="menu-j-select" class="nav" >[]</li>
+                        <li id="menu-c-select" class="nav" >[]</li>
+                    </ul>
+                </div><!--end menu-selection div>    
+                <!--Begin Mobile Navigation Menu from http://astuteo.com/mobilemenu/
+                Very simple class toggle to show an open menu -->
+
+                <button class="nav-button">Toggle Navigation</button>
+                <a href="#"><img class="logosm" src="images/logo.png" alt="MGZN Logo"></a>
+
+                        <ul class="primary-nav">
+                            <li><a href='#'>Home</a></li>
+                            <li><a href='main.html'>About</a></li>
+                            <li class="parent"><a href='#'>Portfolio</a>
+                                <ul>
+                                     <li><a href="#">Ballard Condo</a></li>
+                                     <li><a href="#">Hotel Max</a></li>
+                                     <li><a href="#">Sunview Home</a></li>
+
+                                </ul>
+                            </li>
+                            <li ><a href='#'>Services</a></li>
+                            <li ><a href='#'>Journal</a></li>
+                            <li ><a href='#'>Contact</a></li>
+                        </ul>
+                <!-- End Mobile Navigation-->
+
+                    <!--       To add the parent menu:
+
+                                <li class="parent"><a href="#">About Wilson</a>
+                                                    <ul>
+                                                            <li><a href="#">Massage</a></li>
+                    -->
+                </div><!--end div header-color-->
+            </header>
+            <footer class="index-footer">
+                <ul>
+                    <li>&copy;Copyright</li>
+                    <li><a href="#">MGZN Architects</a></li>
+                    <li>All Rights Reserved</li>
+                    <li class="big"><a href="#">Web Design By: Mark Pfaff</a></li>
+                </ul>
+
+            </footer>
+            <div class="footersm index-footersm">
+                <ul>
+                    <li>&copy;Copyright</li>
+                    <li><a href="#">MGZN Architects</a></li>
+                    <li>All Rights Reserved</li>
+                    <li class="big"><a href="#">Web Design By: Mark Pfaff</a></li>
+                </ul>
+            </div><!--end footersm div-->  
+        </main>
+
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script>
+
+            
+
+
+            $(document).ready(function(){
+
+                //on nav a hover show brackets
+                $("li[id^=\"menu-\"]").hover(function() {
+                    $menuID= this.id;
+                    $("#" + $menuID + "-select").toggleClass("nav-hover-on");
+                   });            
+
+                //Open and close mobile navigation:
+
+                $(".nav-button").click(function () {
+                    $(".nav-button,.primary-nav").toggleClass("open");
+                    });                       
+                
+
+                //portfolio page- on hover switch image  
+                  $(".hover-image").hover(function() {
+                    $(this).attr("src", $(this).attr("src").replace(/\-off.jpg/, "-on.jpg") );
+                            }, function() {
+                    $(this).attr("src",$(this).attr("src").replace(/\-on.jpg/, "-off.jpg") );
+                    
+                   });
+                                     
+            });
+
+        </script>
+
+    </body>
+</html> 
+
+
