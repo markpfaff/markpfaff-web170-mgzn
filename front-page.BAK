@@ -1,0 +1,21 @@
+<?php get_header(); ?>
+<!--middle div started in get_header-->
+<!--
+to do: add home header/footer
+to do: add images
+-->
+<?php //get_sidebar(); ?>  
+<h2><?php the_title(); ?></h2>
+<!--Start Widgets-->
+<div id="widgets">
+    <?php if (have_posts()) : while(have_posts()) : the_post();//start first loop?>
+    <?php the_content('');// get homepage content?>
+    <?php endwhile; endif;//end the loop?>
+    
+</div>
+<!--End Widgets-->
+<small>front-page.php</small>
+<?php rewind_posts(); ?>
+
+<!-- middle div ends in get_footer-->
+<?php get_footer();?>

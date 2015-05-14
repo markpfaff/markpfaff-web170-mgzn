@@ -48,6 +48,53 @@ body {
     margin:0 auto;
 }
 
+    @media screen and (max-width: 1900px) {
+
+        body {
+            font-size:120%;
+        }  
+
+    }
+    
+    @media screen and (max-width: 1100px) {
+
+        body {
+            font-size:110%;
+        }  
+    }
+    
+    @media screen and (max-width: 900px) {
+
+        body {
+            font-size:100%;
+        }  
+
+    }
+    
+    @media screen and (max-width: 800px) {
+
+        body {
+            font-size:90%;
+        }
+        
+    }
+    
+    @media screen and (max-width: 600px) {
+
+        body {
+              /*font-size:120%;  */ 
+              font-size:80%;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+
+        body {
+              /*font-size:120%;  */ 
+              font-size:70%;
+        }
+    }
+
 .index-body {
     background-color:#000000;
 }
@@ -59,6 +106,25 @@ img {
 .logosm {
     display:none;	
 }
+    @media screen and (max-width: 800px) {
+
+        .logosm {
+            display:block;
+            margin:0 auto;
+            position:fixed;
+            top:5px;
+            left:45%;
+            width:50px;
+            z-index: 999;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+
+        .logosm {
+            left:40%;
+        }
+    } 
 
 h1, h2, h3 {
     font-family: 'didot';
@@ -88,6 +154,7 @@ p {
 main {
     width:100%;
     z-index:1;
+    color: #000;
 }
 
 header {
@@ -100,14 +167,32 @@ header {
     max-height: 640px; /*- allows strechyness on scroll passed top */
     height: 600px; /*- start height */
 }
+
+    @media screen and (max-width: 800px) {
+
+        header {
+            background-image:none !important;
+
+        }
+        
+    }
  
 #header-color {
     width: 100%;
     height: 100%;
     transition: background-color 1s;
-
 }
 
+    @media screen and (max-width: 800px) {
+     
+        #header-color {
+        background:none !important;
+        background-color:transparent !important;
+        background: rgb(255, 255, 255) transparent;
+        }
+        
+    }
+    
 .black-background {
     background-color:#000000;
 }
@@ -150,9 +235,7 @@ header {
 
 /*End Main Styles*/
 
-#sidebar {
-    clear:both;
-}
+
 /*Start Navigation*/
 nav {
 /*    height:650px;*/
@@ -162,7 +245,14 @@ nav {
     left: 4%;  
     z-index: 999;
 }
+    
+    @media screen and (max-width: 800px) {
 
+        nav {
+            display:none;
+        }
+    }
+        
 nav ul {
     margin-top:10px;
     text-align:center;
@@ -187,9 +277,9 @@ nav ul li img {
     vertical-align: middle;
 }
 
-.logoimage {
+/*.logoimage {
     width:40%;
-}
+}*/
 
 nav ul li.nav-on {
     text-decoration:underline;
@@ -204,7 +294,37 @@ nav ul li a {
     text-shadow: 2px 2px #000000;
 }
 
+.sub-menu {
+    display: none;
+}
 
+.menu-item-28:hover .sub-menu { 
+    display: block; 
+} 
+
+ul.sub-menu li {
+    clear:both;
+    font-size:.85em;
+}
+
+ul.sub-menu li a {
+    line-height:1.2em;
+}
+
+ul.sub-menu li a:hover {
+    font-style:  italic;   
+}
+
+li#menu-item-24 {
+    background: url("images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:100px;
+        /* Hide the text. */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 /* menu selection brackets*/
 #menu-selection {
@@ -216,6 +336,29 @@ nav ul li a {
     top:-2em;
     z-index: 998;
 }
+
+    @media screen and (max-width: 1900px) {
+
+        #menu-selection { 
+            top:-1.95em;
+   
+        }
+    }
+    
+    @media screen and (max-width: 900px) {  
+    
+        #menu-selection { 
+            top:-2.15em;
+        }
+        
+    }
+    
+    @media screen and (max-width: 800px) {
+    
+        #menu-selection {
+        display:none;
+        }
+    }
 
 #menu-selection ul {
     margin-top:10px;
@@ -294,8 +437,15 @@ nav ul li a {
     clear:both;
 }
 
+small {
+    clear:both;
+}
+/*#sidebar {
+        padding:620px 1em 50px 1em;
+        clear:both;
+}*/
 
-section {
+#middle {
     width:90%;
     color:#000000;
     background-color:#ffffff;
@@ -304,11 +454,33 @@ section {
     padding:620px 1em 50px 1em;
 }
 
-section p, section li {
+    @media screen and (max-width: 800px) {
+
+        #middle {
+            padding: 90px 1em 0 1em;
+            float:none;
+            clear:both;
+        }
+        
+    }
+
+#middle p, #middle li {
     padding:5px;
     padding:.53191475%;
     font-size:1.4em;
     line-height:1.45;
+}
+
+section {
+    width:60%;
+    margin:0 5%;
+    float:left;
+}
+
+aside {
+    float:right;
+    width:30%;
+  
 }
 
 #about-first {
@@ -321,7 +493,7 @@ section p, section li {
     font-size:.85em;
 }
 
-.boxcenter{
+/*.boxcenter{
     float:none;
     clear:both;
     
@@ -341,11 +513,11 @@ section p, section li {
     width:48%;    
     margin:10px 0;
     padding:5px;
-}
+}*/
 
 /*Portfolio Gallery Page*/
 
-.portfolio {
+/*.portfolio {
     background-color: #000000;
     clear:both;
     overflow:auto;
@@ -418,20 +590,20 @@ section p, section li {
 
 .pleft {
     width:47%;
-/*    height:150px;*/
+    height:150px;
     padding:10px;
     float:left;
     position:relative;
 }
 .pright {
     width:47%;
-/*    height:150px;*/
+    height:150px;
     float:right;
     padding:10px;
     margin-right:3%;
     position:relative;
     
-}
+}*/
 
 /* End Portfolio Gallery Page*/
 
@@ -443,6 +615,14 @@ section p, section li {
     font-size: 2em;
     line-height: 1;
 }
+
+    @media screen and (max-width: 800px) {
+
+    #scroll-arrow {
+            display:none;
+        }
+        
+    }
 
 /* Services Page*/
 
@@ -517,12 +697,19 @@ h3.services-title {
 
 }
 
-#thankyou {
+    @media screen and (max-width: 800px) {
+
+        .contact {
+        width: 90%;
+        }
+    }
+    
+/*#thankyou {
     position:absolute;
     left:25%;
     top:40%;
     font-size:1.6em;
-}
+}*/
 
 
 
@@ -641,6 +828,13 @@ footer  {
     float:none;
 }
 
+    @media screen and (max-width: 800px) {
+
+        footer {
+            display:none;
+        }
+    }
+
 footer ul {
     text-align:center;
     list-style-type:none;
@@ -678,11 +872,62 @@ footer ul li a:hover {
     display:none;
 }
 
+    @media screen and (max-width: 800px) {
+        .footersm {
+            clear:both;
+            width:50%;
+            margin: 0 auto;
+            display:block;
+        }
+    }
+
+@media screen and (max-width: 800px) {
+    
+    .footersm ul {
+        margin:0px auto 20px auto;
+        text-align:center;
+        list-style-type:none;
+    }
+    
+}
+
 .footersm ul li {
     font-family: 'Muli', sans-serif;
 }
 
-.index-footer  {
+    @media screen and (max-width: 800px) {
+    
+        .footersm ul li {
+            font-size:1em;
+            display:inline;
+            float:none; 
+            color:#000000;
+            margin-top:5px;
+        }
+    }
+
+@media screen and (max-width: 800px) {
+
+    .footersm ul li a {
+        font-style: normal;
+        text-decoration:none;
+        color:#000000;
+        display:block;
+    }
+
+} 
+
+@media screen and (max-width: 800px) {
+
+    .footersm ul li a:hover {
+        color:#000000;
+        text-decoration:underline;
+    }
+
+} 
+
+
+/*.index-footer  {
     width:90%;
     margin: 0 auto;
     position: fixed;
@@ -699,9 +944,9 @@ footer ul li a:hover {
 
 .index-footer ul li a  {  
     color:#ffffff;
-}
+}*/
 
-.portfolio-footer {
+/*.portfolio-footer {
     padding-top:40px;
     margin-bottom:0;
 }
@@ -712,7 +957,246 @@ footer ul li a:hover {
 
 .portfolio-footer ul li a  {  
     color:#ffffff;
+}*/
+
+@media screen and (max-width: 800px) {
+
+    /* Mobile Navigation
+      -------------------------------------------------------- */
+
+        .nav-button, ul.primary-nav, .phone, .home {
+            display:block;
+        }
+
+        .nav-button {
+            display: block;
+            position: absolute;
+            top: 17px;
+            right: 7px;
+            width: 40px;
+            height: 35px;
+            background: url('../images/menu-icon-large.png'), -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.40));
+            background: url('../images/menu-icon-large.png'),    -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.40));
+            background: url('../images/menu-icon-large.png'),     -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.40));
+            background: url('../images/menu-icon-large.png'),      -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.40));
+      /*	background-size:center center;*/
+            background-repeat: no-repeat;
+            background-size:contain;
+            cursor: pointer;
+            border: 0 none;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            box-shadow: 0 0 4px rgba(0,0,0,.7) inset;
+            border-radius: 5px;
+            z-index: 999;
+            text-indent: -9999px;
+            opacity:1 !important;
+        }
+
+        .nav-button:hover { 
+            background-color: rgba(59,59,59,.6) ; 
+        }
+
+        .nav-button.open {
+            background: url('../images/close-icon-large.png'), -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(59,59,59,.6));
+            background: url('../images/close-icon-large.png'),    -moz-linear-gradient(top, rgba(0,0,0,0), rgba(59,59,59,.6));
+            background: url('../images/close-icon-large.png'),     -ms-linear-gradient(top, rgba(0,0,0,0), rgba(59,59,59,.6));
+            background: url('../images/close-icon-large.png'),      -o-linear-gradient(top, rgba(0,0,0,0), rgba(59,59,59,.6));
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 21px, 100%;
+        }
+
+        .primary-nav {
+            width: 100%;
+            float: none;
+            background-color: rgba(0,0,0,0.6); /* change the menu color */
+            background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2));
+            background-image:    -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2));
+            background-image:     -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2));
+            background-image:      -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2));
+            display: block;
+            height: 70px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,.6);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 998;
+            clear: both;
+      }
+
+      .primary-nav li {
+            display: none;
+            width: 100%;
+            font-family: Arial;
+      }
+      .primary-nav li a {
+            display: block;
+            width: 90%;
+            padding: 10px 5%;
+            font-size: 14px;
+            font-weight: bold;
+            text-shadow: -1px -1px 0 rgba(0,0,0,.15);
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0,0,0,.2);
+            border-top: 1px solid rgba(255,255,255,.1); 
+      }
+      .primary-nav li a:hover {
+            background-color: rgba(0,0,0,.5);
+            border-top-color: transparent;
+      }
+      .primary-nav > li:first-child {
+            border-top: 1px solid rgba(0,0,0,.2);
+      }
+
+      /* Toggle the navigation bar open  */
+
+      .primary-nav.open { 
+            height: auto; 
+            padding-top: 50px;
+      }
+      .primary-nav.open li { 
+            display: block; 
+      }
+
+      /* Submenus – optional .parent class indicates dropdowns */
+
+      .primary-nav > li:hover > a {
+            background: rgba(0,0,0,.5);
+            border-bottom-color: transparent;
+      }
+      .primary-nav li .parent > a:after {
+            content: "▼";
+            color: rgba(255,255,255,.5);
+            float: right;
+      }
+      .primary-nav li .parent > a:hover {
+            background: rgba(0,0,0,.75);
+      }
+      .primary-nav li ul {
+            display: none;
+            background: rgba(0,0,0,.5);
+            border-top: 0 none;
+            padding: 0;
+      }
+      .primary-nav li ul a {
+            border: 0 none;
+            font-size: 12px;
+            padding: 10px 5% 10px 10%;
+            font-weight: normal;
+      }
+      .primary-nav li:hover ul {
+            display: block;
+            border-top: 0 none;
+      }
+
+      /*End Mobile Navigation*/
+
+    
+    /*   Navigation -  To Add Parent menus
+  -------------------------------------------------------- 
+*/
+
+    .primary-nav {
+	width: 100%;
+	float: none;
+	background-color: rgba(0,0,0,0.6);   
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2));
+	background-image:    -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2));
+	background-image:     -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2));
+	background-image:      -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2));
+	display: block;
+	height: 70px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	box-shadow: 0 1px 2px rgba(0,0,0,.6);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 998;
+	clear: both;
+    }
+  
+    .primary-nav li {
+	display: none;
+	width: 100%;
+	font-family: Arial;
+    }
+  
+    .primary-nav li a {
+	display: block;
+	width: 90%;
+	padding: 10px 5%;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.15);
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	border-top: 1px solid rgba(255,255,255,.1); 
+    }
+    
+    .primary-nav li a:hover {
+	background-color: rgba(0,0,0,.5);
+	border-top-color: transparent;
+    }
+    
+    .primary-nav > li:first-child {
+	border-top: 1px solid rgba(0,0,0,.2);
+    }
+
+   /*Toggle the navigation bar open */ 
+
+    .primary-nav.open { 
+	height: auto; 
+	padding-top: 50px;
+    }
+    
+    .primary-nav.open li { 
+	display: block; 
+    }
+
+   /*Submenus – optional .parent class indicates dropdowns*/ 
+
+    .primary-nav > li:hover > a {
+	background: rgba(0,0,0,.5);
+	border-bottom-color: transparent;
+    }
+    
+    .primary-nav li.parent > a:after {
+	content: "▼";
+	color: rgba(255,255,255,.5);
+	float: right;
+    }
+    
+    .primary-nav li.parent > a:hover {
+	background: rgba(0,0,0,.75);
+    }
+    
+    .primary-nav li ul {
+	display: none;
+	background: rgba(0,0,0,.5);
+	border-top: 0 none;
+	padding: 0;
+    }
+ 
+    .primary-nav li ul a {
+	border: 0 none;
+	font-size: 12px;
+	padding: 10px 5%;
+	font-weight: normal;
+    }
+  
+    .primary-nav li:hover ul {
+	display: block;
+	border-top: 0 none;
+    }
 }
+    
 
 /*CSS Background Slider*/
 /*http://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/*/
@@ -735,7 +1219,7 @@ footer ul li a:hover {
     color: transparent;
     background-size: cover;
     background-position: 50% 50%;
-    background-repeat: none;
+    background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s; 
@@ -745,38 +1229,38 @@ footer ul li a:hover {
 }
 
 .cb-slideshow li:nth-child(1) span { 
-    background-image: url(../images/bk1.png) 
+    background-image: url(images/bk1.png) 
 }
 .cb-slideshow li:nth-child(2) span { 
-    background-image: url(../images/bk2.png);
+    background-image: url(images/bk2.png);
     animation-delay: 6s; 
     -webkit-animation-delay: 6s; /* Safari 4+ */
     -moz-animation-delay: 6s; /* Fx 5+ */
     -o-animation-delay: 6s; /*Opera*/
 }
 .cb-slideshow li:nth-child(3) span { 
-    background-image: url(../images/bk3.png);
+    background-image: url(images/bk3.png);
     animation-delay: 12s; 
     -webkit-animation-delay: 12s; /* Safari 4+ */
     -moz-animation-delay: 12s; /* Fx 5+ */
     -o-animation-delay: 12s; /*Opera*/
 }
 .cb-slideshow li:nth-child(4) span { 
-    background-image: url(../images/bk1.png);
+    background-image: url(images/bk1.png);
     animation-delay: 18s; 
     -webkit-animation-delay: 18s; /* Safari 4+ */
     -moz-animation-delay: 18s; /* Fx 5+ */
     -o-animation-delay: 18s; /*Opera*/
 }
 .cb-slideshow li:nth-child(5) span { 
-    background-image: url(../images/bk2.png);
+    background-image: url(images/bk2.png);
     animation-delay: 24s; 
     -webkit-animation-delay: 24s; /* Safari 4+ */
     -moz-animation-delay: 24s; /* Fx 5+ */
     -o-animation-delay: 24s; /*Opera*/
 }
 .cb-slideshow li:nth-child(6) span { 
-    background-image: url(../images/bk3.png);
+    background-image: url(images/bk3.png);
     animation-delay: 30s; 
     -webkit-animation-delay: 30s; /* Safari 4+ */
     -moz-animation-delay: 30s; /* Fx 5+ */
