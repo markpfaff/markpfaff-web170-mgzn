@@ -11,7 +11,7 @@
         <ul>
             <?php rewind_posts(); //end first loop?>
             <?php             query_posts('showposts=4');?>
-            <?php while (have_posts()) : the_post();//start loop?>
+            <?php while (have_posts()) : the_post();//start 2nd loop?>
             <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
             <?php endwhile; // end 2nd loop ?>
         </ul>

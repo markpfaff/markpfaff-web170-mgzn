@@ -23,7 +23,17 @@
             <?php wp_list_categories()?>
         </ul>
             <?php endif; ?>
-    </div><!--    end div with id sub-navigation-->
+    </div><!--    end div with id of "sub-navigation"-->
+    <!--    Begin Quote-->
+    <?php if (get_post_meta($post->ID, 'Quote', true)) :?>
+        <blockquote><?php echo get_post_meta($post->ID, 'Quote', true); ?></blockquote>
+    <?php endif; ?>
+
+    <!--End Quote-->
+
+    <!--Begin Dynamic Sidebar-->
+    <?php dynamic_sidebar(1);//Sidebar 1 is Calendar?>
+    <!--End Dynamic Sidebar-->
 
     <small>sidebar.php</small>                    
 </div><!--end sidebar div-->
