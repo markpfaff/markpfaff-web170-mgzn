@@ -19,7 +19,8 @@
         <link href="media.css" rel="stylesheet" type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?> </title>
+        <meta name="description" content="<?php echo get_the_excerpt();?>" />
+        <title><?php get_the_title_tag(); ?> </title>
         <!--Start WP Head-->
         <?php wp_head();?>
         <!--End WP Head-->

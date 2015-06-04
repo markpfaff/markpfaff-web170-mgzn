@@ -30,5 +30,41 @@ register_nav_menus(array(
 //Enable Featured Images & Post Thumbnails
 add_theme_support('post-thumbnails');
 
+//Add excerpt support to pages
+
+add_post_type_support( 'page', 'excerpt' );
+
+//Get Title Tag
+function get_the_title_tag() {
+    
+    global $post;
+    
+    if(is_front_page()){
+        
+        bloginfo('description');//get the site's main tagline
+        
+    }elseif (is_page() || is_single()){
+        
+        the_title(); //get the specific page/posting title
+        
+    }else{
+        
+        bloginfo('description'); //everything else gets the main tagline
+        
+    }
+    
+    if ($post->post_parent){
+        
+        echo ' | '; //separator with spaces
+        echo get_the_title($post->post_parent); //get specific parent page title
+        
+    }
+    
+    echo ' | '; //separator with spaces
+    bloginfo('name'); //get site name
+    echo ' | ';
+    echo 'Seattle, WA'; //always includes location
+    
+}
 
 ?>
